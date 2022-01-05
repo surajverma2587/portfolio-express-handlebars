@@ -6,11 +6,11 @@
       <img class="img-thumbnail profile-img" src="./images/profile.jpeg" alt="profile image of bob smith">
     </div>
     <div class="flex-grow-1 w-sm-75 mb-4">
-      <ul class="list-group">
-        <li class="list-group-item"><i class="fab fa-github"></i><span class="mx-3">GitHub Profile</span></li>
-        <li class="list-group-item"><i class="fab fa-linkedin"></i><span class="mx-3">LinkedIn Profile</span></li>
-        <li class="list-group-item"><i class="fas fa-envelope"></i><span class="mx-3">Email</span></li>
-      </ul>
+      <div class="list-group">
+        {{#each links as | link |}}
+          {{> linkWithIcon}}
+        {{/each}}
+      </div>
     </div>
   </section>
 </main>

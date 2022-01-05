@@ -1,16 +1,13 @@
 <div class="card m-3" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Project title</h5>
+    <h5 class="card-title">{{title}}</h5>
     <hr />
-    <p class="card-text">Some quick example text to build on the card title and
-      make up the bulk of the card's content.</p>
-    <a
-      href="https://github.com/surajverma2587/avengers-cli"
-      class="card-link"
-    >View in GitHub</a>
-    <a href="https://github.com/surajverma2587" class="card-link">View App</a>
+    <p class="card-text">{{description}}</p>
+    <a href="{{repoUrl}}" class="card-link">View in GitHub</a>
+    <a href="{{appUrl}}">View App</a>
   </div>
   <div class="card-footer small-text">
-    Last updated: 5th Jan, 2022 15:45
+    Last updated:
+    {{formatDateTime lastUpdated}}
   </div>
 </div>

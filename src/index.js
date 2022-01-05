@@ -4,6 +4,7 @@ const expressHandlebars = require("express-handlebars");
 const path = require("path");
 
 const routes = require("./routes");
+const helpers = require("./helpers");
 
 // declare PORT
 const PORT = process.env.PORT || 4000;
@@ -12,7 +13,7 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 
 // create handlebars instance
-const hbs = expressHandlebars.create({});
+const hbs = expressHandlebars.create({ helpers });
 
 // connect express app to handlebars engine
 app.engine("handlebars", hbs.engine);
